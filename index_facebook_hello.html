@@ -1,0 +1,877 @@
+<!DOCTYPE html> 
+<html xmlns:fb="http://www.facebook.com/2008/fbml" lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+<title>mobiCreations | Kitchen Sink</title>
+
+<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+<link rel="stylesheet" href="themes/jQM_Restaurant_Template.css"/>
+<link rel="stylesheet" href="themes/jquery.mobile.1.0.1.transitions.css"/>
+<link rel='stylesheet' id='camera-css'  href='camera.css' type='text/css' media='all'> 
+<link href="photoswipe_nobar_3.0.4.css" rel="stylesheet" type="text/css"/>
+<link href="jquery-mobile.css" rel="stylesheet" type="text/css"/>
+<link href="media-queries.css" rel="stylesheet" type="text/css"/>
+    <!-- iPad/iPhone specific css below, add after your main css >
+     <link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+     <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+     -->
+<style type="text/css">
+* {
+    -webkit-transform: translateZ(0);
+}
+/*html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, footer, header, nav, section {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}*/
+/*CSS3-Animation - FadeIn*/
+@-webkit-keyframes FadeIn { 0% { opacity:0; } 100% { opacity:1; } }
+
+/*Fixes white space in Content area ALSO CHANGE: body .ui-content*/
+body .ui-page{
+ background: #ffffff !important;
+} 
+body .ui-header .ui-title {
+ white-space: normal;
+ }
+ 
+body .ui-header .ui-navbar .ui-btn {
+background: #ffffff;
+text-decoration: none;
+}
+body .ui-header .ui-navbar .ui-btn-down {
+color: #000;
+}
+/*Fixes white space in Content area ALSO CHANGE: body .ui-page*/
+body .ui-content{
+	 min-height: 317px !important;
+	 background: #ffffff !important;
+}
+body .ui-footer .ui-title {
+ white-space: normal;
+ }
+body .ui-footer .ui-navbar {
+ height: 36px;	 
+ text-align:center;
+}
+.cgbuttons {
+	margin: 3px auto;
+	text-align:center;
+}
+.centertext {
+	margin: 3px auto;
+	text-align:center;
+}
+/* Custom Icons*/
+.ui-icon-share-button {
+	background-image: url("images/share_button_18px.png");
+	background-repeat:  no-repeat rgba(0, 0, 0, 0.4) !important;
+}
+h4{ 
+color: #000;
+}
+h4 a:link{ 
+color: #000;
+}
+h4 a:visited{ 
+color: #000;
+}
+h4 a:hover{ 
+color: #000;
+}
+h4 a:active{ 
+color: #000;
+}
+ a:link{ 
+color: #000;
+}
+ a:visited{ 
+color: #000;
+}
+ a:hover{ 
+color: #000;
+}
+ a:active{ 
+color: #000;
+}
+#contact{ margin-top: 5px; height: auto;width: 100%;border-radius: 15px;-webkit-border-radius: 15px;border:3px solid #ffffff;}
+/* Camera.js*/
+.fluid_container {
+	margin: 0 auto;
+	max-width: 1000px;
+	width: 90%;
+}
+/* Social Icons*/
+div[data-role="footer"] {
+  font-family: 'AccessCodePROBold', Arial, Tahoma, sans-serif !important;
+  }
+div[data-role="footer"] .wrapper {
+  padding-top: -20px;
+  position: relative;
+  margin: 0px auto;
+  width:100%;
+  max-width:180px;
+  height: 60px;  
+  background-size:100%;
+}
+div.fullsite {
+  margin: 18px 0;
+  text-align: center;
+  padding-top:5px;
+  padding-bottom:100px;
+}
+div.fullsite a.verolink {
+  font-family: Arial, Tahoma, Verdana, sans-serif;
+  background: url('') right 7px no-repeat;
+  padding-right: 15px;
+  border: none;
+  text-decoration: none;
+  font-weight: normal;
+  text-shadow: none;
+  color: black !important;
+  text-decoration: none;
+  font-size: 14px !important;
+}
+.footer.twitter{
+  height:76px;
+  width:75px;
+  margin-top: 0px;
+  margin-left:0;
+  float: left;
+  display: inline;
+  clear: none;
+}
+.footer.facebook{
+  height:76px;
+  width:75px;
+  margin-top: 0px;
+  margin-left:26px;
+  float: left;
+  display: inline;
+  clear: none;  
+}
+
+/* Main Content Format */
+	#main { 
+		padding: 0 12px;
+		display: inline-block !important; }
+		
+		#main.inner { padding: 12px 12px 0; }
+				
+		.module { 
+			background: #ffffff;
+			margin-bottom: 12px; }
+			
+			.module h3 {
+				background: #ebebeb  url(../images/sidebar-headline.jpg);
+				border-top: 1px solid #ffffff;
+				border-bottom: 1px solid #cdcdcc; 
+				margin: 0;
+				font-size: 13px;
+				line-height: 16px;
+				padding: 15px 12px 14px;
+				font-weight: bold;
+				color: #fff; 
+				text-shadow: .5px .5px 0 #000; }
+		
+			.module p { padding: 2px 12px; }
+			
+			.module div { padding: 7px 0; }
+							
+			.module ul li, .module ol li {
+					list-style: none;
+					padding: 6px 12px 5px;
+					border-top: 1px solid #cdcdcc;
+					font-size: 11px;
+					font-weight: bold; }
+									
+					.odd, .comments { 
+						background: #f4f4f4;
+						text-shadow: 1px 1px 0 #fff; }
+						
+					.author, .comments {
+						font-size: 11px;
+						font-weight: bold; }
+						
+					.article {
+						border-top: 1px solid #cdcdcc;
+						border-bottom: 1px solid #cdcdcc; }
+						
+						.article:last-child { border-bottom: none; }
+						
+					.action {
+						text-align: right; 
+						padding: 6px 0 18px; }
+			
+			.module form div { 
+				padding: 1px 12px 12px;
+				border-top: 1px solid #cdcdcc; }
+				
+			.feed { 
+			    padding: 0 0 7px !important;
+			     }
+			.feed li { 
+				font-weight: normal !important;
+				font-size: 12px !important;
+				padding: 10px 12px 10px 40px !important;
+				background: url(images/icon-bird.png) no-repeat;
+				background-position: 12px 12px;
+				}
+			.feed li.tweet_odd { 
+				background: #f4f4f4 url(images/icon-bird.png) no-repeat;
+				background-position: 12px 12px; 
+				}
+			.feed li:first-child { border: none !important; }
+					
+			.tweet_time {
+				display: block;
+				font-size: 11px; 
+				font-weight: bold; 
+				}
+			 .loading {
+			    text-align:center;
+				}
+				/* Malsup Twitter Plugin */
+			div.twitter { margin: auto; width: 300px; } 
+            #twitter1 { height: 400px; width: 100%;margin-left:-10px; } 
+			
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+            .ui-icon-share-button {
+		            background: url("images/share_button@2x.png") no-repeat rgba(0, 0, 0, 1) !important;
+		            background-size: 18px 18px;
+	            }
+		    .blog-header {
+                    background-image:url('images/blog_header@2x.jpg');
+                }
+		    .feed li { 
+				    background: url(images/icon-bird@2x.png) no-repeat;
+					background-size: 16px 13px;
+					background-position: 12px 12px; 
+				}
+		    .feed li.tweet_odd { 
+					background: #f4f4f4 url(images/icon-bird@2x.png) no-repeat;
+					background-size: 16px 13px;
+					background-position: 12px 12px;
+				}
+}
+</style>
+    <!-- CORE JS FILES -->
+    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/json2.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/plugins/utility.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/core/jquery.animate-enhanced.min.js"></script>
+    <script src="lib/klass.min.js"></script>
+    <script src="lib/custom-scripting.js"></script>
+    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+    <script src='js/plugins/jquery.easing.1.3.js'></script> 
+    <script src='js/plugins/camera.js'></script> 
+    <script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_1').camera({
+				thumbnails: false
+			});
+
+			jQuery('#camera_wrap_2').camera({
+				height: '400px',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: true
+			});
+		});
+	</script>
+    <script src="code.photoswipe.jquery-3.0.4.min.js"></script>
+    
+     <script type="text/javascript">
+		
+         /*
+		 * IMPORTANT!!!
+		 * REMEMBER TO ADD  rel="external"  to your anchor tags. 
+		 * If you don't this will mess with how jQuery Mobile works
+		 */
+		
+		(function(window, $, PhotoSwipe){
+			
+			$(document).ready(function(){
+				
+				
+				$('div.gallery-page').live('pageshow', function(e){
+						
+					// See if there is a PhotoSwipe instance associated with the page.
+					// For this demo I've assumed one page has one instance and the ID 
+					// for each instance is the same as the page ID.
+					//
+					// Of course, it's up to you how many instances per page and what
+					// ID naming convention you use!
+					var 
+						currentPage = $(e.target),
+						photoSwipeInstanceId = currentPage.attr('id'),
+						photoSwipeInstance = PhotoSwipe.getInstance(photoSwipeInstanceId)
+						options = {};
+					
+					if (typeof photoSwipeInstance === "undefined" || photoSwipeInstance === null) {
+						photoSwipeInstance = $("ul.gallery a", e.target).photoSwipe(options, photoSwipeInstanceId);
+					}
+					
+					return true;
+					
+				})
+					
+			});
+		
+		}(window, window.jQuery, window.Code.PhotoSwipe));
+	</script>
+    <script type="text/javascript" src="js/modernizr-2.0.6/modernizr.min.js"></script>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&libraries=places"></script> 
+    <script type="text/javascript" src="js/jquery.ui-1.8.15/jquery.ui.autocomplete.min.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+    <script type="text/javascript" src="js/ui/jquery.ui.map.js"></script>
+	<script type="text/javascript" src="js/ui/jquery.ui.map.services.js"></script>
+	<script type="text/javascript" src="js/ui/jquery.ui.map.extensions.js"></script>
+    <script type="text/javascript">
+				
+			var mobileDemo = { 'center': '57.7973333,12.0502107', 'zoom': 10 };
+			
+			////////////////////////////////////////////////////////////
+	
+		  $('#directions_map').live('pageinit', function() {
+				demo.add('directions_map', function() {
+					$('#map_canvas_1').gmap({'center': mobileDemo.center, 'zoom': mobileDemo.zoom, 'disableDefaultUI':true, 'callback': function() {
+						var self = this;
+						self.set('getCurrentPosition', function() {
+							self.refresh();
+							self.getCurrentPosition( function(position, status) {
+								if ( status === 'OK' ) {
+									var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+									self.get('map').panTo(latlng);
+									self.search({ 'location': latlng }, function(results, status) {
+										if ( status === 'OK' ) {
+											$('#from').val(results[0].formatted_address);
+										}
+									});
+								} else {
+									alert('Unable to get current position');
+								}
+							});
+						});
+						$('#submit').click(function() {
+							self.displayDirections({ 'origin': $('#from').val(), 'destination': $('#to').val(), 'travelMode': google.maps.DirectionsTravelMode.DRIVING }, { 'panel': document.getElementById('directions')}, function(response, status) {
+								( status === 'OK' ) ? $('#results').show() : $('#results').hide();
+							});
+							return false;
+						});
+					}});
+				}).load('directions_map');
+			});
+			
+			$('#directions_map').live('pageshow', function() {
+				demo.add('directions_map', $('#map_canvas_1').gmap('get', 'getCurrentPosition')).load('directions_map');
+			});
+    </script>
+ <!-- JQuery Twitter Feed -->
+    <script src="js/plugins/tweet.js"></script>
+    <script src="js/plugins/scripts.js"></script>
+<!-- Wordpress -Blog-->
+    <script type="text/javascript">
+        var MYBLOG_LIMIT = 7;
+        var MYWRAPPER_CLASS = 'homeblog';
+        
+        var WP={open:function(b){var a={posts:function(){var d=MYBLOG_LIMIT;var e=0;var c={all:function(g){var f=b+"/api/get_recent_posts/";f+="?count="+d+"&page="+e+"&callback=?";jQuery.getJSON(f,function(l){var k=l.posts;for(var j=0;j<k.length;j++){var h=k[j];h.createComment=function(i,m){i.postId=h.id;a.comments().create(i,m)}}g(k)})},findBySlug:function(f,h){var g=b+"/api/get_post/";g+="?slug="+f+"&callback=?";jQuery.getJSON(g,function(i){h(i.post)})},limit:function(f){d=f;return c},page:function(f){e=f;return c}};return c},pages:function(){var c={findBySlug:function(d,f){var e=b+"/api/get_page/";e+="?slug="+d+"&callback=?";jQuery.getJSON(e,function(g){f(g.page)})}};return c},categories:function(){var c={all:function(e){var d=b+"/api/get_category_index/";d+="?callback=?";jQuery.getJSON(d,function(f){e(f.categories)})}};return c},tags:function(){var c={all:function(e){var d=b+"/api/get_tag_index/";d+="?callback=?";jQuery.getJSON(d,function(f){e(f.tags)})}};return c},comments:function(){var c={create:function(f,e){var d=b+"/api/submit_comment/";d+="?post_id="+f.postId+"&name="+f.name+"&email="+f.email+"&content="+f.content+"&callback=?";jQuery.getJSON(d,function(g){e(g)})}};return c}};return a}};
+        
+        var blog = WP.open('http://www.endofphotography.com/');
+        blog.posts().all(function(posts){
+            for(var i = 0; i < posts.length; i++){
+                jQuery('.'+MYWRAPPER_CLASS).append(function(){
+            return (posts[i].content) ? '<div class="lastpost_title" href="'+posts[i].url+'"><h4>'+posts[i].title+'</h4></div><br><div href="'+posts[i].url+'">'+posts[i].content+'</div><br><br>' : '<div href="'+posts[i].url+'"><h4>'+posts[i].date+'</h4></div><br><br><br>';
+	     });
+       }
+     });
+ </script>
+ </head> 
+<body class="clearfix"> 
+<!-- This initializes the Facebook JS SDK. -->
+    <div id="fb-root"></div>
+  <script>
+    (function() {
+      var e = document.createElement('script'); e.async = true;
+          e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+          document.getElementById('fb-root').appendChild(e);
+          }());
+  </script>
+  
+  <script>
+    window.fbAsyncInit = function() {
+      FB.init({ appId: '155223874595014', 
+      status: true, 
+      cookie: true,
+      xfbml: true,
+      oauth: true});
+ 
+      FB.Event.subscribe('auth.statusChange', handleStatusChange);	
+    };
+  </script>
+  
+  <script>
+   function handleStatusChange(response) {
+     document.body.className = response.authResponse ? 'connected' : 'not_connected';
+    
+     if (response.authResponse) {
+       console.log(response);
+       updateUserInfo(response);
+     }
+   }
+   </script>
+ <!-- /HOME PAGE -->
+<div data-role="page" data-theme="f" id="home">
+  <div data-role="header" data-theme="f">
+     <div data-role="navbar" data-theme="f">
+        <ul>
+           <li><a href="#" style="text-align:center;"><img src="images/logo2@2x.png" width="280px" height="83px"></a></li>
+        </ul>
+  </div><!-- /navbar -->
+    <!-- /CAMERA Responsive Slideshow -->
+	 <div class="fluid_container">
+    	<div class="camera_wrap camera_azure_skin" id="camera_wrap_1">
+            <div  data-src="images/slides/road.jpg">
+            </div>
+            <div  data-src="images/slides/leaf.jpg">
+            </div>
+            <div data-src="images/slides/shelter.jpg">
+             </div>
+            <div data-src="images/slides/tree.jpg">
+            </div>
+            <div data-src="images/slides/bridge.jpg"> 
+             </div>
+            <div data-src="images/slides/big_bunny_fake.jpg">
+             </div>
+            </div><!-- #camera_wrap_1 -->
+       </div><!-- .fluid_container -->
+      <div style="clear:both; display:block;"></div>
+   </div><!-- /header -->
+
+	<div data-role="content" style="margin-top:-25px">	
+		<ul data-role="listview" data-inset="true" data-theme="f">
+		    <li data-icon="arrow-r"><a href="#Pages" data-transition="slide">Page Styles</a></li>
+            <li data-icon="arrow-r"><a href="#Gallery" data-transition="slide">Gallery</a></li>
+	        <li data-icon="arrow-r"><a href="#Portrait1" data-transition="slide">Portrait</a></li>
+            <li data-icon="arrow-r"><a href="#Twitter" data-transition="slide">Twitter</a></li>
+            <li data-icon="arrow-r"><a href="facebook.html" data-transition="slide">Facebook</a></li>
+            <li data-icon="arrow-r"><a href="#directions_map" data-transition="slide">Get Directions</a></li>
+            <li data-icon="arrow-r"><a href="#Blog" data-transition="slide">Blog</a></li>
+            <li data-icon="arrow-r"><a href="#Contact1" data-transition="slide">Contact</a></li>
+        </ul>	
+     </div>
+    <div data-role="footer" data-theme="f">
+    <div class="wrapper">
+       <span class="footer twitter"><a href="#" style="padding-bottom:33px;" target="_blank"><img src="images/twitter_circle.png" width="75px" height"56px"></a></span> 
+      <span class="footer facebook"><a href="#" style="padding-bottom:33px;" target="_blank"><img src="images/facebook_circle.png" width="75px" height"56px"></a></span>
+    </div><!-- /Wrapper -->
+    <div class="fullsite">
+    <a rel="external" href="#" class="verolink">© mobiCreations 2012. All Rights Reserved.</a>
+  </div>
+</div><!-- /Footer -->
+</div><!-- /Page -->
+<!-- /Page Styles - Menu -->
+<div data-role="page" data-theme="f" id="Pages">
+<div data-role="header" data-theme="f" class="nav-border2">
+       <a href="#home" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+            <h4>Page Styles</h4>
+            <a href="#" data-role="button" data-icon="share-button" data-inline="true" data-iconpos="notext" data-transition="slideup" data-theme="f"></a>
+</div><!-- /End Header -->
+  <br/>
+  <br/>
+  <div data-role="content" style="margin-top:-25px">	
+		<ul data-role="listview" data-inset="true" data-theme="f">
+		    <li data-icon="arrow-r"><a href="#Singlepage" data-transition="slide">Single Page</a></li>
+            <li data-icon="arrow-r"><a href="#Thumbnails" data-transition="slide">Thumbnails List</a></li>
+	        <li data-icon="arrow-r"><a href="#Collapsible" data-transition="slide">Collapsible</a></li>
+            <li data-icon="arrow-r"><a href="#Formatting" data-transition="slide">Formatting</a></li>
+        </ul>	
+     </div>
+    <div data-role="footer" data-theme="f"></div>
+  </div><!-- /End Page Styles -->
+  <!-- /Page Styles - Single Page -->
+<div data-role="page" data-theme="f" id="Singlepage">
+<div data-role="header" data-theme="f" class="nav-border2">
+       <a href="#Pages" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+            <h4>Single Page</h4>
+            <a href="#" data-role="button" data-icon="share-button" data-inline="true" data-iconpos="notext" data-transition="slideup" data-theme="f"></a>
+</div><!-- /End Header -->
+  <br/>
+   <br/>
+<div data-role="content" style="margin-top:-25px">	
+    <style>
+			table { width:100%; }
+			table caption { text-align:left;  }
+			table thead th { text-align:left; border-bottom-width:1px; border-top-width:1px; }
+			table th, td { text-align:left; padding:6px;} 
+		</style>
+	
+	   <h1>H1 Heading</h1>
+       <hr>
+		<h2>H2 Heading</h2>
+		<h3>H3 Heading</h3>
+		<h4>H4 Heading</h4>
+		<h5>H5 Heading</h5>
+		<h6>H6 Heading</h6>
+		
+		<p>This is a paragraph that contains <strong>strong</strong>, <em>emphasized</em> and <a href="#">linked</a> text. Here is more text so you can see how HTML markup works in content. Here is more text so you can see how HTML markup works in content.</p>
+		
+		<blockquote>How about some blockquote action with a <cite>cite</cite></blockquote>
+        
+         <ul>
+			<li>Unordered list item 1</li>
+			<li>Unordered list item 1</li>
+			<li>Unordered list item 1</li>
+		</ul>
+		
+		<ol>
+			<li>Ordered list item 1</li>
+			<li>Ordered list item 1</li>
+			<li>Ordered list item 1</li>
+		</ol>
+       <br>
+   </div>
+ <div data-role="footer" data-theme="f"></div>
+</div><!-- /End Page Styles -->
+    <!-- /Page Styles - Listview-Thumbnails -->
+<div data-role="page" data-theme="f" id="Thumbnails">
+<div data-role="header" data-theme="f" class="nav-border2">
+       <a href="#Pages" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+            <h4>Thumbnails List</h4>
+            <a href="#" data-role="button" data-icon="share-button" data-inline="true" data-iconpos="notext" data-transition="slideup" data-theme="f"></a>
+</div><!-- /End Header -->
+  <br/>
+  <br/>
+  <div data-role="content" style="margin-top:-25px">	
+		<ul data-role="listview" data-inset="true" data-theme="f">
+		  <li data-icon="arrow-r"><a href="#" data-transition="slide">
+            <img src="images/thumb/jody_thumb.jpg" alt="Jody"/>
+            <h3>Breakfast</h3>
+            <p>Served 7:00 am to 10:30 am daily</p>
+            </a>
+          </li>
+          <li data-icon="arrow-r"><a href="#" data-transition="slide">
+            <img src="images/thumb/jody_thumb.jpg" alt="Jody"/>
+            <h3>Lunch</h3>
+            <p>Served All Day</p>
+            </a>
+          </li>
+          <li data-icon="arrow-r"><a href="#" data-transition="slide">
+            <img src="images/thumb/jody_thumb.jpg" alt="Jody"/>
+            <h3>Dinner</h3>
+            <p>Served All Day</p>
+            </a>
+          </li>
+          <li data-icon="arrow-r"><a href="#" data-transition="slide">
+            <img src="images/thumb/jody_thumb.jpg" alt="Jody"/>
+            <h3>Dessert</h3>
+            <p>Served All Day</p>
+            </a>
+          </li>
+       </ul>	
+    </div>
+    <div data-role="footer" data-theme="f"></div>
+    </div><!-- /End Page Styles -->
+    
+      <!-- /Page Styles - Collapsible -->
+<div data-role="page" data-theme="f" id="Collapsible">
+<div data-role="header" data-theme="f" class="nav-border2">
+       <a href="#Pages" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+            <h4>Collapsible</h4>
+            <a href="#" data-role="button" data-icon="share-button" data-inline="true" data-iconpos="notext" data-transition="slideup" data-theme="f"></a>
+</div><!-- /End Header -->
+  <br/>
+   <br/>
+<div data-role="content" style="margin-top:-25px">	
+    <h2>Collapsible content</h2>
+      <div data-role="collapsible-set">
+		<div data-role="collapsible" data-content-theme="c">
+           <h3>Section 1</h3>
+              <p>I'm the collapsible set content for section 1.</p>
+        </div>
+        
+        <div data-role="collapsible" data-content-theme="c">
+	       <h3>Section 2</h3>
+	          <p>I'm the collapsible set content for section 2.</p>
+	    </div>
+        
+         <div data-role="collapsible" data-content-theme="c">
+	       <h3>Section 3</h3>
+	          <p>I'm the collapsible set content for section 3.</p>
+	    </div>
+        
+         <div data-role="collapsible" data-content-theme="c">
+	       <h3>Section 4</h3>
+	          <p>I'm the collapsible set content for section 4.</p>
+	    </div>
+        
+         <div data-role="collapsible" data-content-theme="c">
+	       <h3>Section 5</h3>
+	          <p>I'm the collapsible set content for section 5.</p>
+	    </div>
+     </div>
+  </div>
+ <div data-role="footer" data-theme="f"></div>
+</div><!-- /End Page Styles -->
+
+      <!-- /Page Styles - Formatting -->
+<div data-role="page" data-theme="f" id="Formatting">
+<div data-role="header" data-theme="f" class="nav-border2">
+       <a href="#Pages" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+            <h4>Formatting</h4>
+            <a href="#" data-role="button" data-icon="share-button" data-inline="true" data-iconpos="notext" data-transition="slideup" data-theme="f"></a>
+</div><!-- /End Header -->
+  <br/>
+   <br/>
+	<div data-role="content">
+		<ul data-role="listview">
+			<li data-role="list-divider">Friday, October 8, 2010 <span class="ui-li-count">2</span></li>
+			<li><a href="#">
+				
+					<h3>Stephen Weber</h3>
+					<p><strong>You've been invited to a meeting at Filament Group in Boston, MA</strong></p>
+					<p>Hey Stephen, if you're available at 10am tomorrow, we've got a meeting with the jQuery team.</p>
+					<p class="ui-li-aside"><strong>6:24</strong>PM</p>
+				
+			</a></li>
+			<li><a href="#">
+				
+				<h3>jQuery Team</h3>
+				<p><strong>Boston Conference Planning</strong></p>
+				<p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+				<p class="ui-li-aside"><strong>9:18</strong>AM</p>
+				
+			</a></li>
+			<li data-role="list-divider">Thursday, October 7, 2010 <span class="ui-li-count">1</span></li>
+			<li><a href="#">
+				<h3>Avery Walker</h3>
+				<p><strong>Re: Dinner Tonight</strong></p>
+				<p>Sure, let's plan on meeting at Highland Kitchen at 8:00 tonight. Can't wait! </p>
+				<p class="ui-li-aside"><strong>4:48</strong>PM</p>
+			</a></li>
+			<li data-role="list-divider">Wednesday, October 6, 2010 <span class="ui-li-count">3</span></li>
+			<li><a href="#">
+				<h3>Amazon.com</h3>
+				<p><strong>4-for-3 Books for Kids</strong></p>
+				<p>As someone who has purchased children's books from our 4-for-3 Store, you may be interested in these featured books.</p>
+				<p class="ui-li-aside"><strong>12:47</strong>PM</p>
+			</a></li>
+			<li><a href="#">
+				<h3>Mike Taylor</h3>
+				<p><strong>Re: This weekend in Maine</strong></p>
+				<p>Hey little buddy, sorry but I can't make it up to vacationland this weekend. Maybe next weekend?</p>
+				<p class="ui-li-aside"><strong>6:24</strong>AM</p>
+			</a></li>
+			<li><a href="#">
+				<h3>Redfin</h3>
+				<p><strong>Redfin listing updates for today</strong></p>
+				<p>There are 3 updates for the home on your watchlist: 1 updated MLS listing and 2 homes under contract.</p>
+				<p class="ui-li-aside"><strong>5:52</strong>AM</p>
+			</a></li>
+				<li data-role="list-divider">Tuesday, October 5, 2010 <span class="ui-li-count">3</span></li>
+				<li><a href="#">
+					<h3>Angela Smith</h3>
+					<p><strong>Link Request</strong></p>
+					<p>My name is Angela Smith, SEO Consultant. I've greatly enjoyed looking through your site and I was wondering if you'd be interested in providing a link</p>
+					<p class="ui-li-aside"><strong>6:24</strong>AM</p>
+				</a></li>
+				<li><a href="#">
+					<h3>Mike Taylor</h3>
+					<p><strong>This weekend in Maine</strong></p>
+					<p>Sounds good, let me check into our plans.</p>
+					<p class="ui-li-aside"><strong>6:24</strong>AM</p>
+				</a></li>
+		</ul>
+   </div><!--/content -->		
+   <div data-role="footer" data-theme="f"></div>
+</div><!-- /End Page Styles -->
+ 
+ <!-- /BEAUTY -->
+<div data-role="page" data-theme="f" id="Gallery" class="gallery-page">
+	<div data-role="header" data-theme="f">
+       <a href="#home" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+            <h4>Gallery</h4>  
+        <a href="#" onTouchStart="checkReachability();" data-role="button" data-icon="share-button" data-inline="true" data-iconpos="notext" data-transition="slideup" data-theme="f"></a>
+    <div data-role="navbar" class="nav-border2">
+        <ul>
+    <li><a href="#" data-role="button" data-transition="fade">Book I</a></li>
+       </ul>
+    </div>    
+  </div>
+
+<div data-role="content">	
+   <ul class="gallery">
+        <li><a href="images/beauty/karolina-2.jpg" rel="external"><img src="images/thumb/karolina_thumb.jpg" alt="Karolina" /></a></li>
+      <li><a href="images/beauty/lauren-2.jpg" rel="external"><img src="images/thumb/lauren_thumb.jpg" alt="Lauren" /></a></li>
+       <li><a href="images/beauty/simona-2.jpg" rel="external"><img src="images/thumb/simona_thumb.jpg" alt="Simona" /></a></li>
+       <li><a href="images/beauty/aneta_portrait-2.jpg" rel="external"><img src="images/thumb/aneta_portrait_thumb.jpg" alt="Aneta" /></a></li>
+      <li><a href="images/beauty/lyuba-2.jpg" rel="external"><img src="images/thumb/lyuba_thumb.jpg" alt="Lyuba" /></a></li>
+      <li><a href="images/beauty/gabriela-2.jpg" rel="external"><img src="images/thumb/gabriela_thumb.jpg" alt="Gabriela" /></a></li>
+      <li><a href="images/beauty/vika-2.jpg" rel="external"><img src="images/thumb/vika_thumb.jpg" alt="Vika" /></a></li>
+   </ul>	
+</div>
+<div data-role="footer" data-theme="f">
+   </div>
+</div>
+
+<!-- /PORTRAIT - People -->
+    <div data-role="page" data-theme="f" id="Portrait1" class="gallery-page">
+        <div data-role="header" data-theme="f">
+            <a href="#home" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+            <h4>PORTRAIT</h4>   
+            <a href="#" onTouchStart="checkReachability();" data-role="button" data-icon="share-button" data-inline="true" data-iconpos="notext" data-transition="slideup" data-theme="f"></a> 
+            
+            <div data-role="navbar" class="nav-border2">
+                <ul>
+                    <li><a href="#" data-role="button" data-transition="fade">People</a></li>
+                    <li><a href="#Portrait2" data-role="button" data-transition="fade">Music</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div data-role="content">	
+            <ul class="gallery">
+                <li><a href="images/portrait/people/Todd_Leveritt_1-2.jpg" rel="external"><img src="images/thumb/todd_thumb.jpg" alt="Todd" /></a></li>
+                <li><a href="images/portrait/people/Ray_Phillips_118-2.jpg" rel="external"><img src="images/thumb/ray_thumb.jpg" alt="Ray" /></a></li>
+                <li><a href="images/portrait/people/Chad_Auler_14-2.jpg" rel="external"><img src="images/thumb/chad_thumb.jpg" alt="Chad" /></a></li>
+                <li><a href="images/portrait/people/Oscar_Diaz_5-2.jpg" rel="external"><img src="images/thumb/oscar_thumb.jpg" alt="Oscar" /></a></li>
+                <li><a href="images/portrait/people/Castastrophe_1-2.jpg" rel="external"><img src="images/thumb/catastrophe_thumb.jpg" alt="Catastrophe" /></a></li>
+                <li><a href="images/portrait/people/Linaar_Lewis_30-2.jpg" rel="external"><img src="images/thumb/linaar_thumb.jpg" alt="Linaar" /></a></li>
+                <li><a href="images/portrait/people/Luciano_28-2.jpg" rel="external"><img src="images/thumb/luciano_thumb.jpg" alt="Luciano" /></a></li>
+                <li><a href="images/portrait/people/Dirk_Strangely_1-2.jpg" rel="external"><img src="images/thumb/strangely_thumb.jpg" alt="Dirk" /></a></li>
+            </ul>
+        </div>
+    <div data-role="footer" data-theme="f">
+   </div>
+    </div>
+    
+    <!-- /PORTRAIT - Music -->
+    <div data-role="page" data-theme="f" id="Portrait2" class="gallery-page">
+        <div data-role="header" data-theme="f">
+            <a href="#" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+            <h4>PORTRAIT</h4>   
+            <a href="#share" onTouchStart="checkReachability();" data-role="button" data-icon="share-button" data-inline="true" data-iconpos="notext" data-transition="slideup" data-theme="f"></a> 
+            
+            <div data-role="navbar" class="nav-border2">
+                <ul>
+                    <li><a href="#Portrait1" data-role="button" data-transition="fade">People</a></li>
+                    <li><a href="#" data-role="button" data-transition="fade">Music</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div data-role="content">	
+            <ul class="gallery">
+                <li><a href="images/portrait/music/Warren_Hood-102-2.jpg" rel="external"><img src="images/thumb/warren_thumb.jpg" alt="Warren" /></a></li>
+                <li><a href="images/portrait/music/Mechanical_Boy-2-2.jpg" rel="external"><img src="images/thumb/mechanicalboy_thumb.jpg" alt="Mechanical" /></a></li>
+                <li><a href="images/portrait/music/erica_havana-2.jpg" rel="external"><img src="images/thumb/erica_thumb.jpg" alt="Erica" /></a></li>
+                <li><a href="images/portrait/music/Sara_Hickman-39-2.jpg" rel="external"><img src="images/thumb/hickman_thumb.jpg" alt="Sara" /></a></li>
+                <li><a href="images/portrait/music/Tody_Castillo_5-2.jpg" rel="external"><img src="images/thumb/tody_thumb.jpg" alt="Tody" /></a></li>
+                <li><a href="images/portrait/music/Southern_Backtones-5-2.jpg" rel="external"><img src="images/thumb/backtones_thumb.jpg" alt="Backtones" /></a></li>
+                <li><a href="images/portrait/music/Wild_Moccasins-72-2.jpg" rel="external"><img src="images/thumb/moccassins_thumb.jpg" alt="Moccasins" /></a></li>
+                <li><a href="images/portrait/music/Flawlessescape-16-2.jpg" rel="external"><img src="images/thumb/flawless_thumb.jpg" alt="Flawless" /></a></li>
+                  <li><a href="images/portrait/music/Arthur_Yoria-2.jpg" rel="external"><img src="images/thumb/arthur_thumb.jpg" alt="Yoria" /></a></li>
+            </ul>
+        </div>
+     <div data-role="footer" data-theme="f">
+     </div>
+    </div>
+<!-- /TWITTER Feed-->
+    <div data-role="page" data-theme="f" id="Twitter">
+        <div data-role="header" data-theme="f" class="nav-border2">
+            <a href="#home" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+            <h4>Twitter</h4>   
+            <a href="#" onTouchStart="location.reload(true);" data-role="button" data-icon="refresh" data-inline="true" data-iconpos="notext" data-transition="fade" data-theme="f"></a> 
+        </div>
+       <div data-role="content">	
+          <a href="https://twitter.com/mobicreations" class="twitter-follow-button" style="text-align:left" data-show-count="true" data-lang="en" data-size="large" data-link-color = "#0080ff" data-button = "grey" >Follow @mobicreations</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+   	     <div class="feed" style="margin-left:-35px;"></div>
+   	   </div>
+    <div data-role="footer" data-theme="f"></div>
+  </div>
+  <!-- /Directions Map -->
+    <div id="directions_map" data-role="page" data-theme="f">
+		<div data-role="header" data-theme="f" style="border-bottom:1px solid #bdbdbd;">
+			<a data-ajax="false" href="#home" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+            <h4>Get Directions</h4>  
+            <a href="#" onTouchStart="location.reload(true);" data-role="button" data-icon="refresh" data-inline="true" data-iconpos="notext" data-transition="fade" data-theme="f"></a> 
+			</div>
+			<div data-role="content">	
+				<div class="ui-bar-c ui-corner-all ui-shadow" style="padding:1em;">
+					<div id="map_canvas_1" style="height:300px;"></div>
+					<p>
+						<label for="from">From</label>
+						<input id="from" class="ui-bar-c" type="text" value="San Antonio, Texas" />
+					</p>
+					<p>
+						<label for="to">To</label>
+						<input id="to" class="ui-bar-c" type="text" value="Roswell, New Mexico" />
+					</p>
+					<a id="submit" href="#" data-role="button" data-icon="search">Get directions</a>
+				</div>
+				<div id="results" class="ui-listview ui-listview-inset ui-corner-all ui-shadow" style="display:none;">
+					<div class="ui-li ui-li-divider ui-btn ui-bar-b ui-corner-top ui-btn-up-undefined">Results</div>
+					<div id="directions"></div>
+					<div class="ui-li ui-li-divider ui-btn ui-bar-b ui-corner-bottom ui-btn-up-undefined"></div>
+				</div>
+			</div>
+		</div>
+   <!-- /Contact -->
+    <div data-role=page id=Contact1>
+        <div data-role=header data-theme="f" style="border-bottom:1px solid #bdbdbd;">
+             <a href="#home" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+            <h4>CONTACT</h4>
+         </div>
+        <div data-role=content data-theme="f">
+           <div id=contact>
+               <h5>Paul Cisneros is a photographer specializing in Fashion, Beauty, Portrait and Travel photography.</h5>
+            
+            <h5>CLIENTS:&nbsp;&nbsp;Modern Luxury, Garage and Salon City.</h5>
+            
+            <h5>EMAIL:&nbsp;&nbsp;<a href="mailto:photo@paulcisneros.com">photo@paulcisneros.com</a></h5>
+            
+            <h5>TEL:&nbsp;&nbsp;USA <a href="tel:+12104541446">(1) 210-454-1446</a></h5>
+          </div>    
+        </div>
+    </div>
+    
+    <!-- /BLOG -->
+    <div data-role="page" data-theme="f" id="Blog">
+        <div data-role="header" data-theme="f" class="nav-border2">
+            <a href="#home" data-role="button" data-icon="arrow-l" data-inline="true" data-transition="reverse slide">Back</a>
+              <h4>BLOG</h4>   
+            <a href="#" data-role="button" data-icon="share-button" data-inline="true" data-iconpos="notext" data-transition="slideup" data-theme="d"></a> 
+        </div>
+    
+    <div data-role="content" style="margin: 20px 20px 20px 20px;">	
+      
+      <div data-theme="f">
+              <div class="blog-header"></div> 
+              <br>
+              <br>
+             <div class="homeblog"></div> 
+         </div>
+       </div>
+    
+       <div data-role="footer" data-theme="f"></div>
+    </div><!-- /END OF INFO -->
+</body>
+</html>

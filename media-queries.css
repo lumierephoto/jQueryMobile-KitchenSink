@@ -1,0 +1,141 @@
+@media all and (min-width: 481px) and (max-width: 1024px){
+    .nav-border{
+    border-top: 1px solid  #bdbdbd;
+    }
+	.nav-border2{
+    border: 1px solid  #bdbdbd;
+    }
+	 h2{padding-top:9px;color:#000;font-weight:300}
+        h2 a:link{padding-top:9px;color:#000}
+        h2 a:visited{padding-top:9px;color:#000}
+        h2 a:hover{padding-top:9px;color:#000}
+        h2 a:active{padding-top:9px;color:#000} 
+        h3{padding-top:0px;color:#000;font-weight:300;text-underline-color:#fff;}
+        h3 a:link{padding-top:0px;color:#000;text-decoration:none;}
+        h3 a:visited{padding-top:0px;color:#000;text-underline-color:#fff;}
+        h3 a:hover{padding-top:0px;color:#000;text-underline-color:#fff;}
+        h3 a:active{padding-top:0px;color:#000;text-underline-color:#fff;}
+        h6{padding-top:0px;color:#000;font-weight:300}
+        h6 a:link{padding-top:0px;color:#000}
+        h6 a:visited{padding-top:0px;color:#000}
+        h6 a:hover{padding-top:0px;color:#000}
+        h6 a:active{padding-top:0px;color:#000}
+		
+      .blog-header {
+        margin:0px; 
+        padding:0px;
+        background-image:url('images/blog_header.jpg');
+        background-repeat:no-repeat;
+        background-size:100%;
+        height:72px;
+        border-bottom: 1px solid #bdbdbd;
+   }
+   #contact { 
+      margin-top: 50px; 
+	  border:25px solid #ffffff;
+   }
+}
+@media all and (min-width: 321px) and (max-width: 480px){
+	.nav-border{
+    border-top: 1px solid  #bdbdbd;
+    }
+	.nav-border2{
+    border: 1px solid  #bdbdbd;
+    }
+	 h2{padding-top:9px;color:#000;font-weight:300}
+        h2 a:link{padding-top:9px;color:#000}
+        h2 a:visited{padding-top:9px;color:#000}
+        h2 a:hover{padding-top:9px;color:#000}
+        h2 a:active{padding-top:9px;color:#000} 
+        h3{padding-top:0px;color:#000;font-weight:300;text-underline-color:#fff;}
+        h3 a:link{padding-top:0px;color:#000;text-decoration:none;}
+        h3 a:visited{padding-top:0px;color:#000;text-underline-color:#fff;}
+        h3 a:hover{padding-top:0px;color:#000;text-underline-color:#fff;}
+        h3 a:active{padding-top:0px;color:#000;text-underline-color:#fff;}
+        h6{padding-top:0px;color:#000;font-weight:300}
+        h6 a:link{padding-top:0px;color:#000}
+        h6 a:visited{padding-top:0px;color:#000}
+        h6 a:hover{padding-top:0px;color:#000}
+        h6 a:active{padding-top:0px;color:#000}
+
+   .left-content {
+		width:0%;
+		overflow: hidden;
+   }
+	.right-content {
+		float:left;
+		width:100%;
+		margin-top: -20px;
+		border-top: 1px solid  #bdbdbd;
+	}
+	.content-primary {
+		border: 30px solid #ffffff;
+	}
+     .post-wall {
+        margin-left: -300px;
+    }
+     .write-something {
+        margin-left: 0px;
+    }
+    .blog-header {
+        margin:0px; 
+        padding:0px;
+        background-image:url('images/blog_header.jpg');
+        background-repeat:no-repeat;
+        background-size:100%;
+        height:72px;
+        border-bottom: 1px solid #bdbdbd;
+   }
+}
+@media all and (min-width: 200px) and (max-width: 320px) {
+    .nav-border{
+    border-top: 1px solid  #bdbdbd;
+    }
+	.nav-border2{
+    border: 1px solid  #bdbdbd;
+    }
+	 h2{padding-top:9px;color:#000;font-weight:300}
+        h2 a:link{padding-top:9px;color:#000}
+        h2 a:visited{padding-top:9px;color:#000}
+        h2 a:hover{padding-top:9px;color:#000}
+        h2 a:active{padding-top:9px;color:#000} 
+        h3{padding-top:0px;color:#000;font-weight:300;text-underline-color:#fff;}
+        h3 a:link{padding-top:0px;color:#000;text-decoration:none;}
+        h3 a:visited{padding-top:0px;color:#000;text-underline-color:#fff;}
+        h3 a:hover{padding-top:0px;color:#000;text-underline-color:#fff;}
+        h3 a:active{padding-top:0px;color:#000;text-underline-color:#fff;}
+        h6{padding-top:0px;color:#000;font-weight:300}
+        h6 a:link{padding-top:0px;color:#000}
+        h6 a:visited{padding-top:0px;color:#000}
+        h6 a:hover{padding-top:0px;color:#000}
+        h6 a:active{padding-top:0px;color:#000}
+
+	.left-content {
+		width:0%;
+		overflow: hidden;
+   }
+	
+	.right-content {
+		float:left;
+		width:100%;
+		margin-top: 0px;
+	}
+	.content-primary {
+		border: 20px solid #ffffff;
+	}
+    .post-wall {
+        margin-left:-155px;
+    }
+    .write-something {
+        margin-left:0px;
+    }
+    .blog-header {
+        margin:0px; 
+        padding:0px;
+        background-image:url('images/blog_header.jpg');
+        background-repeat:no-repeat;
+        background-size:100%;
+        height:72px;
+        border-bottom: 1px solid #bdbdbd;
+    }
+}
